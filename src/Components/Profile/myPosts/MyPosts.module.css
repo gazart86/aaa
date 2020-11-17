@@ -1,0 +1,11 @@
+.postsBlock {
+   padding: 10px;
+}
+
+.postsBlock input {
+   margin-left: 5px;
+}
+
+.posts post {
+   cursor: pointer;
+}

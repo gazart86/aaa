@@ -1,0 +1,11 @@
+.newsWrapper {
+   line-height: 25px;
+}
+
+.newsText {
+   margin-bottom: 30px;
+}
+
+.newsWrapper img {
+   width: 100%;
+}
