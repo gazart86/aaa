@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './News.module.css';
 
-function News() {
+const News = () => {
   return (
       <div className={s.newsWrapper}>
         <h1>News!</h1>

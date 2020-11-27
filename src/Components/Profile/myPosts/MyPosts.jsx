@@ -2,23 +2,25 @@ import React from 'react';
 import  s from '../myPosts/MyPosts.module.css';
 import Post from './Post/Post';
 
-function MyPosts() {
+
+const MyPosts = (props) => {
+
+  let postsElements = props.posts.map(p => <Post message={p.message} like={p.like} dlike={p.dlike}/>);
+
   return (
     <div className={s.postsBlock}>
-       <h3>My Posts</h3>
+      <h3>My Posts</h3>
       <div>
         <form>
           <label>
             Name:
-            <input type="text" name="name" />
+            <input type="text" name="name"/>
           </label>
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Submit"/>
         </form>
       </div>
       <div className={s.posts}>
-        <Post message={"It's a new post"}  like={'3'} dlike={'0'}/>
-        <Post message={"It's an old post"} like={'5'} dlike={'1'}/>
-        <Post message={"It's a good post"} like={'9'} dlike={'2'}/>
+        { postsElements }
       </div>
     </div>
   )
