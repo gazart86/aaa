@@ -5,22 +5,23 @@ import dislike from './likes/dislike.png';
 
 
 const Post = (props) => {
-  
   return (
     <div className={s.item}>
       <img src={'https://e7.pngegg.com/pngimages/931/209/png-clipart-computer-icons-symbol-avatar-logo-person-with-helmut-miscellaneous-black.png'} alt={'desc'} />
 
-      {props.message}
+      { props.message }
 
       <div className={s.likes}>
+        
         <span>
           <img src={like} alt={'l'} /> {props.like}
         </span>
-        <span>
 
+        <span>
           {props.dlike}
           <img src={dislike} alt={'dl'} />
         </span>
+
       </div>
     </div>
   )

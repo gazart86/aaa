@@ -6,10 +6,10 @@ const ProfileInfo = () => {
    return (
       <div>
          <div className={s.piBanner}>
-            <img className={s.profileImg} src={'https://www.litindia.in/images/slider/dotnet.jpg'} alt={'desc'}/>
+            <img className={s.profileImg} src={'https://c4.wallpaperflare.com/wallpaper/435/542/549/javascript-google-node-js-html-microsoft-visual-studio-hd-wallpaper-thumb.jpg'} alt={'desc'}/>
          </div>
          <div className={s.blockDescription}>
-            avatar + description
+            PROFILE DESCRIPTION
          </div>
       </div>
    )

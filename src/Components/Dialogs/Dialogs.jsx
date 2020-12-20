@@ -7,10 +7,9 @@ import Message from './DialogItem/Message/Message.jsx';
 const Dialogs = (props) => {
 
   // Through the map() method we got this string from incoming array from server.
-  let dialogsElements = props.dialogs.map(d => <DialogItem name={d.name} id={d.id}/>);
-  let messagesElements = props.messages.map(m => <Message message={m.message}/>);
+  let dialogsElements  = props.state.dialogs.map(d => <DialogItem name={d.name} id={d.id} />);
+  let messagesElements = props.state.messages.map(m => <Message message={m.message} />);
 
-  console.log(messagesElements)
   return (
     <div className={s.dialogs}>
       

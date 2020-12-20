@@ -9,13 +9,12 @@
    transition: .2s;
    line-height: 30px;
    text-decoration: none;
+   font-size: 18px;
 }
 
 .item a.active {
    color: yellow;
 }
-
-
 
 .item a:hover {
    color: #000;
