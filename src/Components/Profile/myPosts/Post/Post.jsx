@@ -9,7 +9,7 @@ const Post = (props) => {
     <div className={s.item}>
       <img src={'https://e7.pngegg.com/pngimages/931/209/png-clipart-computer-icons-symbol-avatar-logo-person-with-helmut-miscellaneous-black.png'} alt={'desc'} />
 
-      { props.message }
+      {props.message}
 
       <div className={s.likes}>
         

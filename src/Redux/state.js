@@ -1,12 +1,17 @@
-import {reRender} from '../render';
+let reRender = () => {
+   console.log('state changed');
+}
 
-export let state = {
+
+export const state = {
    profilePage: {
       posts: [
          {id: 1, message: "It's first post",  like: 3, dlike: 0}, 
          {id: 2, message: "It's second post", like: 6, dlike: 1}, 
          {id: 3, message: "It's a last post", like: 9, dlike: 2}
-      ]
+      ],
+
+      newPostText: 'hi-tech'
    },
    
    messagesPage: { 
@@ -30,16 +35,25 @@ export let state = {
    sidebar: {}
 }
 
-// component addPost is an object
-export let addPost = (postMessage) => { 
+export const addPost = () => { 
    
    let newPost = {
       id: 4,
-      message: postMessage,
-      like: 6,
-      dlike: 1
+      message: state.profilePage.newPostText,
+      like: 2,
+      dlike: 0
    };
 
    state.profilePage.posts.push(newPost);
+
    reRender();
+}
+
+export const updateNewPostText = (newText) => {
+   state.profilePage.newPostText = newText;
+   reRender();
+}
+
+export const subscribe = (observer) => {
+   reRender = observer;
 }
